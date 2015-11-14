@@ -5,6 +5,7 @@
 
 * Your contribution here.
 
+* [#1203](https://github.com/ruby-grape/grape/pull/1203): Allow custom coercion failure messages - [@zuk](https://github.com/zuk).
 * [#1196](https://github.com/ruby-grape/grape/pull/1196): Allow multiple `before_each` blocks - [@huynhquancam](https://github.com/huynhquancam).
 * [#1190](https://github.com/ruby-grape/grape/putt/1190): Bypass formatting for statuses with no entity-body - [@tylerdooling](https://github.com/tylerdooling).
 * [#1188](https://github.com/ruby-grape/grape/putt/1188): Allow parameters with more than one type - [@dslh](https://github.com/dslh).
