@@ -11,7 +11,12 @@ module Grape
         if valid_type?(new_value)
           params[attr_name] = new_value
         else
-          fail Grape::Exceptions::Validation, params: [@scope.full_name(attr_name)], message_key: :coerce
+          bad_value = new_value
+          if bad_value.is_a?(Types::InvalidValue) && !bad_value.message.nil?
+            fail Grape::Exceptions::Validation, params: [@scope.full_name(attr_name)], message: bad_value.message.to_s
+          else
+            fail Grape::Exceptions::Validation, params: [@scope.full_name(attr_name)], message_key: :coerce
+          end
         end
       end
 
